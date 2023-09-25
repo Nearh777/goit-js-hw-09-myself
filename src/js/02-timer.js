@@ -27,7 +27,7 @@ flatpickr(date, {
     } else {
       btn.disabled = false;
       Notify.success('Let`s go?');
-      
+
       const startTime = selectedDates[0];
 
       btn.addEventListener('click', () => {
@@ -41,6 +41,7 @@ flatpickr(date, {
           if (deltaTime < 1000) {
             clearInterval(timerId);
             date.disabled = false;
+            btn.disabled = true;
           }
         }, 1000);
       });
